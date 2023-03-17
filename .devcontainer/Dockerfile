@@ -4,6 +4,9 @@ FROM universalrobots/ursim_e-series
 #CMD ["bash"]
 ENV HOME=/sdk-1.13.0
 RUN apt-get -y update \
+&& apt-get install -y git \
+&& apt-get install -y iputils-ping \
+&& apt-get install -y build-essential \
 && apt-get install -y openjdk-8-jdk \
 && apt install -y software-properties-common \
 && apt install -y apt-transport-https \
